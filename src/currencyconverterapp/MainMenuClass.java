@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package currencyconverterapp;
 
-import java.util.Arrays;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 
@@ -843,7 +839,6 @@ public class MainMenuClass extends javax.swing.JFrame {
         String passString = new String(password);
         
         if ((username.equals(user.getUsername())) && (passString.equals(user.getPassword()))) {
-            System.out.println("yay");
             usernameInvalidLabel.setText("");
             parentPanel.removeAll();
             parentPanel.add(mainMenuPanel);
@@ -915,7 +910,7 @@ public class MainMenuClass extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) currencyTable.getModel();
         
         try {
-            amount = CurrencyConvertorTestConsole.convert(Double.parseDouble(AmountButton.getText()), currency1.toString(), currency2.toString());
+            amount = CurrencyConverterClass.convert(Double.parseDouble(AmountButton.getText()), currency1.toString(), currency2.toString());
             amountLabel.setText(currency2.toString() + " " + amount);
             model.addRow(new Object[]{currency1, currency2, amount});
         } catch (Exception e)
@@ -1039,6 +1034,7 @@ public class MainMenuClass extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojerusan.RSMetroTextPlaceHolder AmountButton;
     private javax.swing.JLabel amountLabel;
@@ -1095,3 +1091,4 @@ public class MainMenuClass extends javax.swing.JFrame {
     private rojerusan.RSMetroTextPlaceHolder usernameTextField;
     // End of variables declaration//GEN-END:variables
 }
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^{ END OF FILE }^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//

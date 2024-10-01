@@ -1,3 +1,4 @@
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^{ BEGINNING OF FILE }^^^^^^^^^^^^^^^^^^^^^^^^^^//
 package currencyconverterapp;
 
 import com.google.gson.JsonElement;
@@ -8,8 +9,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-public class CurrencyConvertorTestConsole {
+/**
+ *
+ * @author ST10434366
+ */
+public class CurrencyConverterClass {
 // Replace with your actual API key
     static final String API_ENDPOINT = "https://v6.exchangerate-api.com/v6/46ed8c195be4785720a09bb7/latest/USD";
     static String[] CURRENCIES = {
@@ -33,7 +37,8 @@ public class CurrencyConvertorTestConsole {
     };
 
 
-
+    //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
+    // Converts the given amount to a another currency, returning the a double
     public static double convert(double amount, String fromCurrency, String toCurrency) throws IOException {
         // Make Request
         URL url = new URL(API_ENDPOINT);
@@ -59,3 +64,4 @@ public class CurrencyConvertorTestConsole {
         return amount * rateTo / rateFrom;
     }
 }
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^{ END OF FILE }^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
