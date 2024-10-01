@@ -1,5 +1,5 @@
 # Exchango - Currency converter app
-VoxSupportBot 🤖 is an intelligent support bot that dynamically understands your queries and  provides textual response, in addition to this functionality the bot supports text to speech with a variable speed option.
+Currency conversion application that can convert various currency pairs
 
 # Ussage 
 ```java
